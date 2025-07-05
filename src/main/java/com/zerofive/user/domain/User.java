@@ -1,7 +1,15 @@
 package com.zerofive.user.domain;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
@@ -19,12 +27,12 @@ public class User {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "gender", nullable = false)
+    @Column(name = "gender")
     private String gender;
 
     @Column(name = "phone", nullable = false)
     private String phone;
 
-    @Column(name = "address", nullable = false)
+    @Column(name = "address")
     private String address;
 }
